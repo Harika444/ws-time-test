@@ -8,9 +8,9 @@ COPY .npmrc .
 
 ARG TOKEN
 
-RUN npm publish
+RUN npm install
 
-#COPY . .
+COPY . .
 
-#EXPOSE 8080
-#CMD [ "node", "server.js" ]
+EXPOSE 8080
+CMD [ "node", "server.js" ]
